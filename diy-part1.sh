@@ -17,5 +17,12 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #luci-app-dockerman up
-git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
-git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+#git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
+#git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+
+git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
+git clone https://github.com/pmkol/v2ray-geodata.git package/v2ray-geodata
