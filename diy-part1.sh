@@ -20,8 +20,12 @@
 #git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
 #git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 
+# adguardhome
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
+# mosdns
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
